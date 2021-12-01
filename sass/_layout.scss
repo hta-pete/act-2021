@@ -1,0 +1,221 @@
+/* ––––––––––––––––––––––––––––––––––––––––––––
+
+LAYOUT
+
+––––––––––––––––––––––––––––––––––––––––––– */
+$global_pad:60px;
+$grid_pad:30px;
+
+.container{
+  position:relative;
+  width:100%;
+  max-width:1600px;
+  margin:0 auto;
+  padding:0 $global_pad;
+}
+.container_md{
+	position:relative;
+  width:100%;
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 $global_pad;
+}
+.container_sm{
+  position:relative;
+  width:100%;
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 $global_pad;
+}
+.container_xs{
+  position:relative;
+  width:100%;
+  max-width:960px;
+  margin:0 auto;
+  padding:0 $global_pad;
+}
+/* ––––––––––––––––––––––––––––––––––––––––––––
+FLEX
+––––––––––––––––––––––––––––––––––––––––––– */
+.flex{
+	@include flexbox;
+}
+.flex_center{
+	@include flexbox;
+	@include justify-content(center);
+	@include align-items(center);
+
+}
+.flex_center-v{
+	@include flexbox;
+	@include align-items(center);
+	
+}
+.flex_center-h{
+	@include flexbox;
+	@include justify-content(center);
+}
+.flex_space-between{
+	@include flexbox;
+	@include justify-content(space-between);
+}
+.flex_end{
+  @include flexbox;
+	@include justify-content(flex-end);
+}
+.flex_reverse{
+	@include flexbox;
+	flex-direction: row-reverse;
+}
+/* ––––––––––––––––––––––––––––––––––––––––––––
+GRID
+––––––––––––––––––––––––––––––––––––––––––– */
+.grid_2{
+	display: -ms-grid; 
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;           
+  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-gap: $grid_pad;
+  grid-gap: $grid_pad;
+}
+.grid_3{
+	display: -ms-grid; 
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;           
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-gap: $grid_pad;
+  grid-gap: $grid_pad;
+}
+.grid_4{
+	display: -ms-grid; 
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;           
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-gap: $grid_pad;
+  grid-gap: $grid_pad;
+}
+.grid_row{
+	margin-bottom:$grid_pad;
+	&:last-child{
+		margin-bottom:0;
+	}
+}
+.grid_item{
+	border:1px solid $primary;
+	img{
+  	display:block;
+  	width:100%;
+  	height: auto;
+  }
+}
+.grid_item-inner{
+	padding:60px;
+}
+/* ––––––––––––––––––––––––––––––––––––––––––––
+COLUMNS
+––––––––––––––––––––––––––––––––––––––––––– */
+.col{
+  position:relative;
+  width:100%;
+}
+.col_2{
+  position:relative;
+  width:50%;
+  img{
+  	display:block;
+  	width:100%;
+  	height: auto;
+  	border:1px solid $primary;
+  }
+}
+/* ––––––––––––––––––––––––––––––––––––––––––––
+PADDING 
+––––––––––––––––––––––––––––––––––––––––––– */
+//vertical
+.pad_v-lg{
+	padding:120px 0;
+}
+.pad_v-md{
+	padding:90px 0;
+}
+.pad_v-sm{
+	padding:60px 0;
+}
+//horizontal
+.pad_h-lg{
+	padding:0 120px;
+}
+.pad_h-md{
+	padding:0 90px;
+}
+.pad_h-sm{
+	padding:0 60px;
+}
+//top
+.pad_t-60{
+	padding:60px 0 0 0;
+}
+.pad_t-30{
+	padding:30px 0 0 0;
+}
+.pad_t-15{
+	padding:15px 0 0 0;
+}
+//bottom
+.pad_b-60{
+	padding:0 0 60px 0;
+}
+.pad_b-30{
+	padding:0 0 30px 0;
+}
+.pad_b-15{
+	padding:0 0 15px 0;
+}
+
+
+
+.pad_r-25{
+	padding-right:25px;
+}
+.pad_r-50{
+	padding-right:50px;
+}
+.pad_r-60{
+	padding-right:60px;
+}
+.pad_r-90{
+	padding-right:90px;
+}
+
+.pad_l-25{
+	padding-left:25px;
+}
+.pad_l-60{
+	padding-left:60px;
+}
+.pad_l-90{
+	padding-left:90px;
+}
+/* ––––––––––––––––––––––––––––––––––––––––––––
+IMAGE/VIDEO
+––––––––––––––––––––––––––––––––––––––––––– */
+.image_fit{
+	img{
+		display:block;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		object-fit:cover;
+	}
+}
+.video_fit{
+	video{
+		display:block;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		object-fit:cover;
+	}
+}
