@@ -595,7 +595,7 @@ header .phone-header i {
   }
 }
 footer {
-  padding: 50px 0 90px 0;
+  padding: 170px 0 90px 0;
   background: #1d4485;
 }
 footer .column {
@@ -1131,7 +1131,7 @@ footer .footer-bottom_links a:hover {
 .apply-cta {
   background: #f9f8f6;
   background-size: auto 100%;
-  padding: 120px 0 200px 0;
+  padding: 120px 0;
 }
 .apply-cta p {
   max-width: 550px;
@@ -1140,11 +1140,17 @@ footer .footer-bottom_links a:hover {
 }
 
 .best-fleets {
-  background: #1d4485;
-  padding-bottom: 60px;
+  background: white;
+  padding-top: 60px;
 }
 .best-fleets img {
-  margin-top: -90px;
+  margin-bottom: -130px;
+  margin-top: 60px;
+}
+.best-fleets p {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=main.css.map */
