@@ -331,11 +331,23 @@
 .apply-cta{
 	background:$gray_light;
 	background-size:auto 100%;
+	padding:120px 0 200px 0;
 	p{
 		max-width:550px;
 		margin-left:auto;
 		margin-right:auto;
 	}
+}
+// ———————————————————————————————————
+// BEST FLEETS
+// ——————————————————————————————————— 
+.best-fleets{
+	background:$blue;
+	padding-bottom:60px;
+	img{
+		margin-top:-90px;
+	}
+	
 }
 
 
