@@ -3,7 +3,8 @@
 // ——————————————————————————————————— 
 .hero{
 	position:relative;
-	background:$gray_light;
+	background:$blue;
+	color:white;
 	width:100%;
 	height: calc(100vw * (9/16));
   max-height:70vh;
@@ -17,9 +18,9 @@
 	}
 	.hero-copy_inner{
 		max-width:500px;
+		color:white;
 	}
 	.hero-menu{
-		color:$blue;
 		.hero-menu_wrap-links{
 			a{
 				z-index:0;
@@ -41,7 +42,7 @@
 				@include transition(box-shadow 0.8s $easeOutExpo);
 				&:hover{
 					z-index:1;
-					box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+					box-shadow:0 10px 30px 0 rgba(0,0,0,0.5);
 				}
 				i{
 					color:$orange;
@@ -150,7 +151,8 @@
 // BENEFITS
 // ——————————————————————————————————— 
 .benefits{
-	
+	background:url("../img/map-bg-1.jpg") no-repeat bottom left 40vw;
+	background-size:1200px auto;
 }
 // ———————————————————————————————————
 // DRIVER STORIES
@@ -262,6 +264,8 @@
 // ACT PLAZA
 // ——————————————————————————————————— 
 .plaza{
+	background:url("../img/map-bg-2.jpg") no-repeat top right 40vw;
+	background-size:1000px auto;
 	.plaza-inner{
 		position:relative;
 	}
@@ -329,13 +333,16 @@
 // APPLY CTA
 // ——————————————————————————————————— 
 .apply-cta{
-	background:$gray_light;
+	background:$blue;
+	color:white;
+	background:$blue url("../img/act-logo-bg.png") no-repeat center;
 	background-size:auto 100%;
 	padding:120px 0;
 	p{
 		max-width:550px;
 		margin-left:auto;
 		margin-right:auto;
+		color:rgba(255,255,255,0.7);
 	}
 }
 // ———————————————————————————————————

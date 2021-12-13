@@ -793,7 +793,8 @@ footer .footer-bottom_links a:hover {
 
 .hero {
   position: relative;
-  background: #f9f8f6;
+  background: #1d4485;
+  color: white;
   width: 100%;
   height: calc(100vw * (9/16));
   max-height: 70vh;
@@ -808,9 +809,7 @@ footer .footer-bottom_links a:hover {
 }
 .hero .hero-copy_inner {
   max-width: 500px;
-}
-.hero .hero-menu {
-  color: #1d4485;
+  color: white;
 }
 .hero .hero-menu .hero-menu_wrap-links a {
   z-index: 0;
@@ -837,7 +836,7 @@ footer .footer-bottom_links a:hover {
 }
 .hero .hero-menu .hero-menu_wrap-links a:hover {
   z-index: 1;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.5);
 }
 .hero .hero-menu .hero-menu_wrap-links a i {
   color: #f5832d;
@@ -931,6 +930,11 @@ footer .footer-bottom_links a:hover {
     height: calc(100vw * (9/16));
   }
 }
+.benefits {
+  background: url("../img/map-bg-1.jpg") no-repeat bottom left 40vw;
+  background-size: 1200px auto;
+}
+
 .driver-stories {
   background: #f9f8f6;
 }
@@ -1055,6 +1059,10 @@ footer .footer-bottom_links a:hover {
   color: #f5832d;
 }
 
+.plaza {
+  background: url("../img/map-bg-2.jpg") no-repeat top right 40vw;
+  background-size: 1000px auto;
+}
 .plaza .plaza-inner {
   position: relative;
 }
@@ -1129,7 +1137,9 @@ footer .footer-bottom_links a:hover {
 }
 
 .apply-cta {
-  background: #f9f8f6;
+  background: #1d4485;
+  color: white;
+  background: #1d4485 url("../img/act-logo-bg.png") no-repeat center;
   background-size: auto 100%;
   padding: 120px 0;
 }
@@ -1137,6 +1147,7 @@ footer .footer-bottom_links a:hover {
   max-width: 550px;
   margin-left: auto;
   margin-right: auto;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .best-fleets {
