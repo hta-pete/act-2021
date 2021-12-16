@@ -5,6 +5,7 @@ $(function(){
       raf           = requestAnimationFrame,
       lastScrollTop = $window.scrollTop();
 
+
   // CHECK SCROLL POSITION & DIRECTION
   if (raf) {
     loop();
@@ -22,55 +23,89 @@ $(function(){
       raf(loop);
     }
 
-    if ( y == 'down' && scrollTop > 110 ){
+    if ( y == 'down' && scrollTop > 90 ){
       $('header').addClass('hide');
     } else {
       $('header').removeClass('hide');
     }
+
+    if ( scrollTop > 90 ){
+      $('header').addClass('active');
+    } else {
+      $('header').removeClass('active');
+    }
+
     lastScrollTop = scrollTop;
 
   }
 
-  // EQUIPMENT SLIDER
-  $('.equipment-slider_left').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: false,
-    prevArrow: false,
-    nextArrow: false
-  });
-  $('.equipment-slider_right').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: false,
-    asNavFor: $('.equipment-slider_left'),
-    prevArrow: $('.equipment-slider_prev-btn'),
-    nextArrow: $('.equipment-slider_next-btn')
-  });
+});
 
-  $('.equipment-slider_btns').on('mouseenter', function(){
-    $('.equipment').addClass('active');
-  });
-  $('.equipment-slider_btns').on('mouseleave', function(){
-    $('.equipment').removeClass('active');
-  });
 
-  // ACT PLAZA SLIDER
-  $('.plaza-slider').slick({
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    dots: false,
-    variableWidth: true,
-    prevArrow: $('.prev-btn'),
-    nextArrow: $('.next-btn')
-  });
+var explore    = document.querySelector('#explore');
+var exploreBtn = document.querySelector('.explore-btn');
 
-  
+exploreBtn.addEventListener("click", function(e){
+
+  e.preventDefault();
+  explore.scrollIntoView({behavior:'smooth'});
 
 });
+
+
+// Card Slider
+let cardsSlider = document.querySelectorAll(".card-slider");
+let cards;
+
+cardsSlider.forEach(function(p){
+  let card      = p.querySelectorAll(".card");
+  let cardsNext = p.querySelector(".card-slider_next");
+  let cardsPrev = p.querySelector(".card-slider_prev");
+
+  if(cardsNext){
+    cardsNext.addEventListener("click", scrollCardsLeft);
+  }
+  if(cardsPrev){
+    cardsPrev.addEventListener("click", scrollCardsRight);
+  }
+  card.forEach(function(c){
+    //c.addEventListener("mousemove", hoverCardCircle);
+  });
+  
+});
+
+function scrollCardsLeft(){
+  cards = this.parentNode.querySelector(".card-slider_scroll");
+  cards.scrollBy({
+    left: 640, 
+    behavior: 'smooth'
+  });
+}
+function scrollCardsRight(){
+  cards = this.parentNode.querySelector(".card-slider_scroll");
+  cards.scrollBy({
+    left: -640, 
+    behavior: 'smooth'
+  });
+}
+function hoverCardCircle(e){
+  let rect    = this.getBoundingClientRect();
+  let circle  = this.querySelector(".card-circle");
+
+  if(circle){
+    let curX    = e.clientX - rect.left;
+    let curY    = e.clientY - rect.top;
+    let offsetX = circle.offsetWidth/2;
+    let offsetY = circle.offsetHeight/2;
+
+    circle.style.top = (curY - offsetY) + "px";
+    circle.style.left = (curX - offsetX) + "px";
+
+    console.log(curX - offsetX)
+  }
+}
+
+
 
 
 
